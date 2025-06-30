@@ -20,12 +20,6 @@
         </div>
     </header>
 
-    <div class="theme-float" onclick="toggleTheme()" aria-label="Alternar tema">
-        <div id="switch" class="switch">
-            <span id="switch-icon">🌞</span>
-        </div>
-    </div>
-
   <main class="page-content container">
     {% block content %}{% endblock %}
   </main>
@@ -35,39 +29,5 @@
       <p>© {{ 2025 }} Desenvolvido por Davi com 💻 e ☕</p>
     </div>
   </footer>
-  <script>
-    const html = document.documentElement;
-    const switchIcon = document.getElementById("switch-icon");
-    const switchEl = document.getElementById("switch");
-
-    function toggleTheme() {
-        const isDark = html.classList.toggle("dark-mode");
-
-        // Atualiza ícone
-        switchIcon.textContent = isDark ? "🌙" : "🌞";
-
-        // Atualiza posição do botão
-        switchEl.classList.toggle("on", isDark);
-
-        // Salva preferência no navegador
-        localStorage.setItem("tema", isDark ? "dark" : "light");
-    }
-
-    // Aplica o tema salvo ao carregar
-    window.onload = () => {
-        const saved = localStorage.getItem("tema");
-        const isDark = saved === "dark";
-
-        if (isDark) {
-        html.classList.add("dark-mode");
-        switchIcon.textContent = "🌙";
-        switchEl.classList.add("on");
-        } else {
-        html.classList.remove("dark-mode");
-        switchIcon.textContent = "🌞";
-        switchEl.classList.remove("on");
-        }
-    };
-    </script>
 </body>
 </html>
