@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="projetos-section">
+  <h2 class="projetos-title">💼 Meus Projetos</h2>
+  <p class="projetos-subtitle">Aqui estão alguns dos projetos que desenvolvi com carinho, código limpo e muito café ☕.</p>
+
+  <div class="cards-container">
+    {% for projeto in projetos %}
+    <div class="card-projeto">
+      <h3>{{ projeto.nome }}</h3>
+      <p>{{ projeto.descricao }}</p>
+      <div class="tecnologias">
+        {% for tech in projeto.tecnologias %}
+          <span class="tag">{{ tech }}</span>
+        {% endfor %}
+      </div>
+      <a href="{{ projeto.link }}" target="_blank" class="btn small">🔗 Ver no GitHub</a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

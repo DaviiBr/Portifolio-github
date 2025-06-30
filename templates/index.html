@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero-section">
+  <div class="hero-grid">
+    <div class="hero-img-container">
+      <img src="{{ url_for('static', filename='img/perfil.png') }}" alt="Foto de Perfil" class="profile-img-large">
+    </div>
+    <div class="hero-content">
+      <h2 class="hero-title">Salve!<span class="destaque"></span></h2>
+      <p class="hero-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer quis auctor elit, vel cursus risus. Mauris blandit, sapien in pulvinar congue, turpis mi posuere quam, sed varius metus diam a magna.
+      </p>
+
+      <div class="actions">
+        <a href="/projetos" class="btn">💼 Ver Projetos</a>
+        <a href="/contato" class="btn secundario">📬 Entrar em Contato</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

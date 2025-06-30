@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Portfólio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="topbar">
+        <div class="container header-content">
+            <h1 class="logo">Meu Portfólio</h1>
+            <nav class="menu">
+                <a href="/">Início</a>
+                <a href="/projetos">Projetos</a>
+                <a href="/contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="theme-float" onclick="toggleTheme()" aria-label="Alternar tema">
+        <div id="switch" class="switch">
+            <span id="switch-icon">🌞</span>
+        </div>
+    </div>
+
+  <main class="page-content container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© {{ 2025 }} Desenvolvido por Davi com 💻 e ☕</p>
+    </div>
+  </footer>
+  <script>
+    const html = document.documentElement;
+    const switchIcon = document.getElementById("switch-icon");
+    const switchEl = document.getElementById("switch");
+
+    function toggleTheme() {
+        const isDark = html.classList.toggle("dark-mode");
+
+        // Atualiza ícone
+        switchIcon.textContent = isDark ? "🌙" : "🌞";
+
+        // Atualiza posição do botão
+        switchEl.classList.toggle("on", isDark);
+
+        // Salva preferência no navegador
+        localStorage.setItem("tema", isDark ? "dark" : "light");
+    }
+
+    // Aplica o tema salvo ao carregar
+    window.onload = () => {
+        const saved = localStorage.getItem("tema");
+        const isDark = saved === "dark";
+
+        if (isDark) {
+        html.classList.add("dark-mode");
+        switchIcon.textContent = "🌙";
+        switchEl.classList.add("on");
+        } else {
+        html.classList.remove("dark-mode");
+        switchIcon.textContent = "🌞";
+        switchEl.classList.remove("on");
+        }
+    };
+    </script>
+</body>
+</html>

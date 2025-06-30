@@ -1,0 +1,20 @@
+[
+  {
+    "nome": "Jogo de Xadrez",
+    "descricao": "Jogo de xadrez completo desenvolvido em Java, com lógica de movimentação e regras do jogo implementadas.",
+    "tecnologias": ["Java", "Orientação a Objetos"],
+    "link": "https://github.com/DaviiBr/jogo-de-xadrez"
+  },
+  {
+    "nome": "API Teste",
+    "descricao": "Pequena API para fins de teste e aprendizado, com endpoints REST e estrutura organizada.",
+    "tecnologias": ["Python", "Flask", "API REST"],
+    "link": "https://github.com/DaviiBr/Teste-de-API"
+  },
+  {
+    "nome": "WebScraping Teste",
+    "descricao": "Script de Web Scraping para coleta de dados automatizada em páginas web.",
+    "tecnologias": ["Python", "Requests", "BeautifulSoup"],
+    "link": "https://github.com/DaviiBr/Teste-de-Web-scraping"
+  }
+]
