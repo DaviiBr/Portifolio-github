@@ -7,14 +7,29 @@
       <img src="{{ url_for('static', filename='img/perfil.png') }}" alt="Foto de Perfil" class="profile-img-large">
     </div>
     <div class="hero-content">
-      <h2 class="hero-title">Salve!<span class="destaque"></span></h2>
+      <h2 class="hero-title">Salve! <span class="destaque"></span></h2>
       <p class="hero-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer quis auctor elit, vel cursus risus. Mauris blandit, sapien in pulvinar congue, turpis mi posuere quam, sed varius metus diam a magna.
+        Estudante de ADS e Engenharia Civil, com experiência em automações Python, interfaces com Flet, MySQL e manipulação de planilhas.
+      </p>
+      <p class="hero-text">
+        Crio soluções funcionais com foco em automação, usabilidade e integração entre sistemas.
       </p>
 
       <div class="actions">
         <a href="/projetos" class="btn">💼 Ver Projetos</a>
-        <a href="/contato" class="btn secundario">📬 Entrar em Contato</a>
+        <a href="/saibamais" class="btn secundario">📬 Saiba mais</a>
+      </div>
+
+      <div class="contato-home">
+        <a href="mailto:seuemail@exemplo.com" class="contato-icon" aria-label="Email">
+          <img src="{{ url_for('static', filename='img/email.png') }}" alt="E-mail">
+        </a>
+        <a href="https://www.linkedin.com/in/seuusuario" target="_blank" class="contato-icon" aria-label="LinkedIn">
+          <img src="{{ url_for('static', filename='img/linkedin.png') }}" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/seuusuario" target="_blank" class="contato-icon" aria-label="GitHub">
+          <img src="{{ url_for('static', filename='img/github.svg') }}" alt="GitHub">
+        </a>
       </div>
     </div>
   </div>

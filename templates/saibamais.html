@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="saibamais-section">
+  <h2 class="projetos-title">🧠 Minhas Habilidades</h2>
+  <p class="projetos-subtitle">Conhecimentos práticos e acadêmicos que aplico no meu dia a dia de desenvolvimento.</p>
+
+  <div class="cards-container">
+    <div class="card-projeto">
+      <h3>
+        <img src="{{ url_for('static', filename='img/python.svg') }}" class="card-icon" alt="Python">
+        Desenvolvimento em Python
+      </h3>
+      <p>Criação de automações, scripts e aplicações com foco em produtividade, clareza e eficiência. Experiência com bibliotecas como Flet, Pandas, PyMuPDF e Selenium.</p>
+    </div>
+
+    <div class="card-projeto">
+      <h3>
+        <img src="{{ url_for('static', filename='img/mysql.svg') }}" class="card-icon" alt="MySQL">
+        Banco de Dados MySQL
+      </h3>
+      <p>Conexão, leitura e manipulação de dados em bancos MySQL. Utilização de Python com PyMySQL para automações baseadas em dados reais.</p>
+    </div>
+
+    <div class="card-projeto">
+      <h3>
+        <img src="{{ url_for('static', filename='img/sheets.png') }}" class="card-icon" alt="Excel">
+        Manipulação de Planilhas
+      </h3>
+      <p>Tratamento de dados em Excel com OpenPyXL e Pandas. Experiência em automações com geração e leitura de relatórios, tabelas e dashboards automatizados.</p>
+    </div>
+
+    <div class="card-projeto">
+      <h3>
+        <img src="{{ url_for('static', filename='img/api.svg') }}" class="card-icon" alt="API">
+        Desenvolvimento de APIs
+      </h3>
+      <p>Conhecimentos acadêmicos em criação de APIs REST com Flask, boas práticas de estruturação backend e integração de sistemas.</p>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

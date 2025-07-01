@@ -130,11 +130,11 @@ a {
 }
 
 .profile-img-large {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
+  width: 340px;
+  height: 340px;
+  border-radius: 10%;
   object-fit: cover;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
@@ -148,16 +148,18 @@ a {
 }
 
 .hero-title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #111827;
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #1e3a8a;
 }
 
 .hero-text {
   font-size: 1rem;
-  color: #374151;
-  margin-bottom: 2rem;
-  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  max-width: 540px;
 }
 
 /* Responsivo */
@@ -180,7 +182,8 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  justify-content: flex-start;
+  padding-top: 1rem;
+  justify-content: center;
 }
 
 .btn {
@@ -240,6 +243,29 @@ a {
   filter: grayscale(0);
 }
 
+/* Parte para contato na pagina inicial */
+
+.contato-home {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contato-home .contato-icon img {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  filter: grayscale(0.4);
+}
+
+.contato-home .contato-icon:hover img {
+  transform: scale(1.1);
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+
 .actions.center {
   display: flex;
   justify-content: center;
@@ -295,6 +321,18 @@ a {
   font-size: 0.95rem;
   color: #374151;
   margin-bottom: 1rem;
+}
+
+.card-projeto h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 
 .tecnologias {

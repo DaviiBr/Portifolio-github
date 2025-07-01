@@ -13,9 +13,9 @@ def projetos():
         projetos = json.load(f)
     return render_template('projetos.html', projetos=projetos)
 
-@app.route('/contato')
-def contato():
-    return render_template('contato.html')
+@app.route('/saibamais')
+def saibamais():
+    return render_template('saibamais.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
