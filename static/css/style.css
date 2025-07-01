@@ -220,6 +220,18 @@ a {
   .actions {
     justify-content: center;
   }
+  .estilo-referencia-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-texto {
+    text-align: center;
+  }
+
+  .contato-home {
+    justify-content: center;
+  }
 }
 
 .contato-icones {
@@ -354,6 +366,83 @@ a {
 .btn.small {
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
+}
+
+/* Já existente, mas reforçamos o layout */
+.estilo-referencia-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-texto {
+  flex: 1 1 50%;
+  text-align: left;
+}
+
+.hero-imagem {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.img-ilustracao {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.hero-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.subtitulo-destaque {
+  color: #1e40af;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.hero-description {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 540px;
+}
+
+/* Reutiliza os ícones de contato, apenas centraliza melhor */
+.contato-home.centralizada {
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .estilo-referencia-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-texto {
+    text-align: center;
+  }
+
+  .hero-description {
+    margin: 0 auto 2rem;
+  }
+
+  .hero-imagem {
+    margin-top: 1.5rem;
+  }
 }
 
 
